@@ -10,7 +10,7 @@ class SimpleFPDF(FPDF):
         super().__init__(*args, **kwargs)
         try:
             # Font dosyaları için göreceli yol (modules/fonts altında)
-            font_dir = "C:/Users/selen/OneDrive/Belgeler/denemeotomasyon/financial-analysis-automation-site/modules/fonts"
+            font_dir = os.path.join(os.path.dirname(__file__), "..", "modules", "fonts")
             
             # Font dosya yolları
             font_path_regular = os.path.join(font_dir, "DejaVuSans.ttf")
